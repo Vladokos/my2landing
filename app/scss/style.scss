@@ -3,7 +3,7 @@
 
 * {
     font-family: "Lato", sans-serif;
-    font-weight: 400px;
+    font-weight: 400;
 }
 
 @mixin textSet($fz, $lh, $clr) {
@@ -57,7 +57,7 @@
             #help {
                 opacity: 0.4;
                 color: #1b1c1e;
-            }
+            }#interface #interface__inner #image-phone ul
             #ios,
             a {
                 background-color: #267df4;
@@ -276,7 +276,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                overflow: hidden;
+            
                 margin: 0 -33.5%;
                 li {
                     width: 23%;
