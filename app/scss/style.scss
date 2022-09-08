@@ -1,689 +1,724 @@
 @import "nullstyle.scss";
 @import "slider.scss";
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
 * {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
+  font-family: "Roboto", sans-serif;
 }
 
 @mixin textSet($fz, $lh, $clr) {
-    font-size: $fz;
-    line-height: $lh;
-    color: $clr;
+  font-size: $fz;
+  line-height: $lh;
+  color: $clr;
 }
 
 #container {
-    margin: 0 auto;
-    width: 1170px;
-    padding: 0 15px;
+  margin: 0 auto;
+  width: 1170px;
+  padding: 0 15px;
 }
 
 #main-nav {
-    background-color: #f8faf9;
-    padding: 44px 0;
-    #main-nav__inner {
-        display: flex;
-        box-sizing: border-box;
-        @include textSet(16px, normal, #000000);
+  background-color: #f8faf9;
+  padding: 60px 0;
+  #main-nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include textSet(16px, normal, #26272d);
+  }
+  #info-nav {
+    display: flex;
+    align-items: center;
+
+    column-gap: 50px;
+  }
+  #info-nav__burgermenu {
+    cursor: pointer;
+    div {
+      background-color: #1b1c1e;
+      width: 30px;
+      height: 2px;
+      margin-bottom: 10px;
     }
-    #info-nav__burgermenu {
-        position: absolute;
-        div {
-            background-color: #1b1c1e;
-            width: 30px;
-            height: 2px;
-            margin-bottom: 10px;
-        }
+    div:last-child {
+      margin: 0;
     }
-    #info-nav__src {
-        margin-left: 30px;
-        li {
-            display: inline-block;
-            margin-left: 42px;
-        }
+  }
+  #info-nav__src {
+    ul {
+      display: flex;
+      column-gap: 30px;
     }
-    #logo {
-        margin: 0 197px;
-        font-size: 18px;
-        span {
-            font-weight: 700;
-        }
+    li {
+      cursor: pointer;
     }
-    #other-menu {
-        text-decoration-style: none;
-        li {
-            display: inline-block;
-            margin-right: 30px;
-            #help {
-                opacity: 0.4;
-                color: #1b1c1e;
-            }#interface #interface__inner #image-phone ul
-            #ios,
-            a {
-                background-color: #267df4;
-                border-radius: 21px;
-                color: #fff;
-                padding: 6px 3px;
-            }
-        }
+    li:hover {
+      color: #267df4;
     }
+  }
+  #logo {
+    cursor: pointer;
+
+    // margin: 0 197px;
+    font-size: 18px;
+    span {
+      font-weight: 700;
+    }
+  }
+  #other-menu {
+    text-decoration-style: none;
+    ul {
+      display: flex;
+      column-gap: 40px;
+    }
+    li:nth-child(1) {
+      opacity: 0.4;
+      color: #26272d;
+    }
+    li {
+      cursor: pointer;
+
+      #interface #interface__inner #image-phone ul #ios,
+      a {
+        background-color: #267df4;
+        border-radius: 21px;
+        color: #fff;
+        padding: 9px 16px;
+      }
+      #ios img {
+        width: 13px;
+        height: 16px;
+      }
+    }
+    li:hover {
+      opacity: 1;
+
+      color: #267df4;
+    }
+  }
 }
 
 #greet {
-    padding: 128px 0 0 0;
-    background-image: url(../images/mountains.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    #greet__inner {
-        text-align: center;
-        h1 {
-            font-family: "Varela Round", sans-serif;
-            @include textSet(62px, 72px, #26272d);
-            margin-bottom: 40px;
-        }
-        #subtitle {
-            font-size: 20px;
-            color: #8c8f94;
-            width: 781px;
-            margin: 0 auto;
-            margin-bottom: 62px;
-        }
-        #video-btn {
-            border: 1px solid #d9dcde;
-            border-radius: 25px;
-            background-color: #f6f7f9;
-            width: 15%;
-            margin: 0 40%;
-            height: 50px;
-            width: 205px;
-            margin-bottom: 75px;
-            #vide-btn_obj {
-                padding: 15px 0;
-                span {
-                    img {
-                        padding: 3px 15px 0 0;
-                    }
-                }
-                #vide-btn__link {
-                    font-size: 16px;
-                    color: #26272d;
-                    text-decoration: none;
-                    padding: 18px 0;
-                }
-            }
-        }
-        #smartphone {
-            margin: 0 auto;
-        }
+  padding: 128px 0 0 0;
+  background-image: url(../images/mountains.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  #greet__inner {
+    text-align: center;
+    h1 {
+      font-family: "Varela Round", sans-serif;
+      @include textSet(62px, 72px, #26272d);
+      margin-bottom: 40px;
     }
+    #subtitle {
+      font-size: 20px;
+      color: #8c8f94;
+      width: 781px;
+      margin: 0 auto;
+      margin-bottom: 62px;
+    }
+    #video-btn {
+      border: 1px solid #d9dcde;
+      border-radius: 25px;
+      background-color: #f6f7f9;
+      width: 15%;
+      margin: 0 40%;
+      height: 50px;
+      width: 205px;
+      margin-bottom: 75px;
+      #vide-btn_obj {
+        padding: 15px 0;
+        span {
+          img {
+            padding: 3px 15px 0 0;
+          }
+        }
+        #vide-btn__link {
+          font-size: 16px;
+          color: #26272d;
+          text-decoration: none;
+          padding: 18px 0;
+        }
+      }
+    }
+    #smartphone {
+      margin: 0 auto;
+    }
+  }
 }
 
 #features {
-    padding: 127px 0 167px 0;
-    &::before {
-        content: "";
-        width: 10px;
-        height: 10px;
-    }
-    #features__inner {
-        display: flex;
-        @include textSet(26px, 34px, #26272d);
+  padding: 127px 0 167px 0;
+  &::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+  }
+  #features__inner {
+    display: flex;
+    @include textSet(26px, 34px, #26272d);
 
-        #function-item {
-            margin-right: 111px;
-            img {
-                margin-bottom: 45px;
-            }
-            h2 {
-                margin-bottom: 48px;
-                font-weight: 300;
-            }
-            #function-descr {
-                @include textSet(18px, 26px, #8c8f94);
-                width: 496px;
-            }
-        }
+    #function-item {
+      margin-right: 111px;
+      img {
+        margin-bottom: 45px;
+      }
+      h2 {
+        margin-bottom: 48px;
+        font-weight: 300;
+      }
+      #function-descr {
+        @include textSet(18px, 26px, #8c8f94);
+        width: 496px;
+      }
     }
-    hr {
-        margin: 126px auto;
-        opacity: 0.05;
-        border: 1px solid #26272d;
-        width: 1170px;
-    }
+  }
+  hr {
+    margin: 126px auto;
+    opacity: 0.05;
+    border: 1px solid #26272d;
+    width: 1170px;
+  }
 }
 
 #protection {
-    padding: 126px 0 256px;
-    position: relative;
-    #protection__inner {
-        #iphone {
-            right: 54%;
-            position: absolute;
-            bottom: 0%;
-        }
-        #specification {
-            margin-left: 45%;
-            h3 {
-                font-family: "Varela Round", sans-serif;
-                @include textSet(42px, 52px, #26272d);
-                margin-bottom: 73px;
-                width: 230px;
-            }
-            #specification-decr {
-                @include textSet(20px, 28px, #8c8f94);
-                width: 475px;
-                margin-bottom: 75px;
-            }
-            #specification-btn {
-                display: flex;
-                #specification-hackbtn {
-                    margin-right: 52px;
-                    background-color: #267df4;
-                    border-radius: 21px;
-                    width: 202px;
-                    a {
-                        padding: 14px 26px;
-                        @include textSet(16px, 45px, #ffffff);
-                        span {
-                            padding: 0 49px 2px 0;
-                            background: url(../images/protection/Arrow_Icon.svg) right no-repeat;
-                        }
-                    }
-                }
-                #specification-morebtn {
-                    border: 1px solid #e9e9ea;
-                    border-radius: 21px;
-                    width: 142px;
-                    text-align: center;
-                    a {
-                        @include textSet(16px, 40px, #26272d);
-                    }
-                }
-            }
-        }
+  padding: 126px 0 256px;
+  position: relative;
+  #protection__inner {
+    #iphone {
+      right: 54%;
+      position: absolute;
+      bottom: 0%;
     }
+    #specification {
+      margin-left: 45%;
+      h3 {
+        font-family: "Varela Round", sans-serif;
+        @include textSet(42px, 52px, #26272d);
+        margin-bottom: 73px;
+        width: 230px;
+      }
+      #specification-decr {
+        @include textSet(20px, 28px, #8c8f94);
+        width: 475px;
+        margin-bottom: 75px;
+      }
+      #specification-btn {
+        display: flex;
+        #specification-hackbtn {
+          margin-right: 52px;
+          background-color: #267df4;
+          border-radius: 21px;
+          width: 202px;
+          a {
+            padding: 14px 26px;
+            @include textSet(16px, 45px, #ffffff);
+            span {
+              padding: 0 49px 2px 0;
+              background: url(../images/protection/Arrow_Icon.svg) right
+                no-repeat;
+            }
+          }
+        }
+        #specification-morebtn {
+          border: 1px solid #e9e9ea;
+          border-radius: 21px;
+          width: 142px;
+          text-align: center;
+          a {
+            @include textSet(16px, 40px, #26272d);
+          }
+        }
+      }
+    }
+  }
 }
 
 #disposition {
-    #disposition__inner {
-        padding: 205px 0 197px;
-        position: relative;
-        #map {
-            left: 46%;
-            position: absolute;
-            bottom: 17%;
-        }
-
-        #interpretation {
-            h3 {
-                font-family: "Varela Round", sans-serif;
-                @include textSet(42px, 52px, #26272d);
-                margin-bottom: 64px;
-                width: 300px;
-            }
-            #disposition-decr {
-                @include textSet(20px, 28px, #8c8f94);
-                margin-bottom: 68px;
-                width: 469px;
-            }
-            #partners {
-                p {
-                    @include textSet(14px, 22px, #26272d);
-                    font-weight: 700;
-                    margin-bottom: 31px;
-                    text-transform: uppercase;
-                    letter-spacing: 0.1em;
-                }
-                #parner-img {
-                    display: flex;
-                    #partners-img__dropbox {
-                        margin-right: 31px;
-                    }
-                }
-            }
-        }
+  #disposition__inner {
+    padding: 205px 0 197px;
+    position: relative;
+    #map {
+      left: 46%;
+      position: absolute;
+      bottom: 17%;
     }
+
+    #interpretation {
+      h3 {
+        font-family: "Varela Round", sans-serif;
+        @include textSet(42px, 52px, #26272d);
+        margin-bottom: 64px;
+        width: 300px;
+      }
+      #disposition-decr {
+        @include textSet(20px, 28px, #8c8f94);
+        margin-bottom: 68px;
+        width: 469px;
+      }
+      #partners {
+        p {
+          @include textSet(14px, 22px, #26272d);
+          font-weight: 700;
+          margin-bottom: 31px;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+        }
+        #parner-img {
+          display: flex;
+          #partners-img__dropbox {
+            margin-right: 31px;
+          }
+        }
+      }
+    }
+  }
 }
 
 #interface {
-    padding: 143px 131px;
-    background-color: #f5f5f8;
-    #interface__inner {
-        text-align: center;
-        #title {
-            font-family: "Varela Round", sans-serif;
-            @include textSet(42px, 52px, #26272d);
-            margin-bottom: 45px;
-            &::after {
-                content: "";
-                display: block;
-                width: 50px;
-                height: 2px;
-                margin: 47px auto;
-                background-color: #267df4;
-                border-radius: 1px;
-            }
-        }
-        #subtitle {
-            @include textSet(12px, 22px, #8c8f94);
-            text-transform: uppercase;
-            margin-bottom: 46px;
-        }
-        #image-phone {
-            margin-bottom: 198px;
-            ul {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            
-                margin: 0 -33.5%;
-                li {
-                    width: 23%;
-                }
-            }
-        }
-        #invite {
-            #invite-company-name {
-                @include textSet(12px, 22px, #3a3d4b);
-                opacity: 0.5;
-                text-transform: uppercase;
-                margin-bottom: 37px;
-            }
-            #invite-title {
-                font-family: "Varela Round", sans-serif;
-                @include textSet(42px, 52px, #3a3d4b);
-                margin-bottom: 47px;
-            }
-            #adress-input {
-                margin-bottom: 66px;
-                position: relative;
-                #adress-input__string {
-                    border-radius: 25px;
-                    border: 1px solid #cbcbcf;
-                    background-color: #f5f5f8;
-                    width: 502px;
-                    height: 50px;
-                    padding: 0 22px;
-                    @include textSet(16px, normal, #3a3d4b);
-                    &::placeholder {
-                        content: "";
-                    }
-                }
-                #adress-input__sendInvite {
-                    position: absolute;
-                    @include textSet(16px, 42px, #ffffff);
-                    background-color: #6fc754;
-                    border-radius: 21px;
-                    top: 7%;
-                    left: 57%;
-                    width: 164px;
-
-                    span {
-                        background: url(../images/interface/Arrow_Icon.svg) right no-repeat;
-                        padding: 0 30px 3px 0;
-                    }
-                }
-            }
-            #subtitle {
-                @include textSet(12px, normal, #3a3d4b);
-                opacity: 0.3;
-                text-transform: uppercase;
-                margin-bottom: 22px;
-            }
-            #download {
-                background-color: #131315;
-                border-radius: 30px;
-                width: 210px;
-                margin: 0 auto;
-                padding: 0 0 5px 0;
-                #download-store {
-                    @include textSet(16px, 25px, #ffffff);
-                    span {
-                        background: url(../images/interface/Apple_Logo.svg) left no-repeat;
-                        padding: 10px 0 35px 40px;
-                        p {
-                            font-size: 24px;
-                            padding-left: 40px;
-                        }
-                    }
-                }
-            }
-        }
+  padding: 143px 131px;
+  background-color: #f5f5f8;
+  #interface__inner {
+    text-align: center;
+    #title {
+      font-family: "Varela Round", sans-serif;
+      @include textSet(42px, 52px, #26272d);
+      margin-bottom: 45px;
+      &::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 2px;
+        margin: 47px auto;
+        background-color: #267df4;
+        border-radius: 1px;
+      }
     }
+    #subtitle {
+      @include textSet(12px, 22px, #8c8f94);
+      text-transform: uppercase;
+      margin-bottom: 46px;
+    }
+    #image-phone {
+      margin-bottom: 198px;
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //fix the width in image-phone and map
+        margin: 0 -33.5%;
+        li {
+          width: 23%;
+        }
+      }
+    }
+    #invite {
+      #invite-company-name {
+        @include textSet(12px, 22px, #3a3d4b);
+        opacity: 0.5;
+        text-transform: uppercase;
+        margin-bottom: 37px;
+      }
+      #invite-title {
+        font-family: "Varela Round", sans-serif;
+        @include textSet(42px, 52px, #3a3d4b);
+        margin-bottom: 47px;
+      }
+      #adress-input {
+        margin-bottom: 66px;
+        position: relative;
+        #adress-input__string {
+          border-radius: 25px;
+          border: 1px solid #cbcbcf;
+          background-color: #f5f5f8;
+          width: 502px;
+          height: 50px;
+          padding: 0 22px;
+          @include textSet(16px, normal, #3a3d4b);
+          &::placeholder {
+            content: "";
+          }
+        }
+        #adress-input__sendInvite {
+          position: absolute;
+          @include textSet(16px, 42px, #ffffff);
+          background-color: #6fc754;
+          border-radius: 21px;
+          top: 7%;
+          left: 57%;
+          width: 164px;
+
+          span {
+            background: url(../images/interface/Arrow_Icon.svg) right no-repeat;
+            padding: 0 30px 3px 0;
+          }
+        }
+      }
+      #subtitle {
+        @include textSet(12px, normal, #3a3d4b);
+        opacity: 0.3;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+      }
+      #download {
+        background-color: #131315;
+        border-radius: 30px;
+        width: 210px;
+        margin: 0 auto;
+        padding: 0 0 5px 0;
+        #download-store {
+          @include textSet(16px, 25px, #ffffff);
+          span {
+            background: url(../images/interface/Apple_Logo.svg) left no-repeat;
+            padding: 10px 0 35px 40px;
+            p {
+              font-size: 24px;
+              padding-left: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 #reviews {
-    padding: 132px 0 128px;
-    #reviews-inner {
-        #reviews-items {
-            #reviews-item {
-                text-align: center;
-                #reviews-item__img {
-                    margin-bottom: 75px;
-                    img {
-                        box-shadow: 15px 41px 66px rgba(92, 95, 101, 0.28), 3px 9px 16px rgba(61, 61, 62, 0.15);
-                        border-radius: 50%;
-                    }
-                }
-                #reviews-item__feedback {
-                    #reviews-item__feedback-title {
-                        @include textSet(32px, 38px, #26272d);
-                        margin-bottom: 48px;
-                    }
-                    #reviews-item__feedback-subtitle {
-                        @include textSet(20px, 28px, #8c8f94);
-                        width: 555px;
-                        margin: 0 auto 30px;
-                    }
-                    #reviews-item__rating {
-                        ul {
-                            display: flex;
-                            margin: 0 43.5% 38px;
-                        }
-                    }
-                    #reviews-item__author {
-                        @include textSet(12px, 22px, #26272d);
-                        font-weight: 700;
-                        text-transform: uppercase;
-                        letter-spacing: 1.2px;
-                    }
-                }
-            }
+  padding: 132px 0 128px;
+  #reviews-inner {
+    #reviews-items {
+      #reviews-item {
+        text-align: center;
+        #reviews-item__img {
+          margin-bottom: 75px;
+          img {
+            box-shadow: 15px 41px 66px rgba(92, 95, 101, 0.28),
+              3px 9px 16px rgba(61, 61, 62, 0.15);
+            border-radius: 50%;
+          }
         }
+        #reviews-item__feedback {
+          #reviews-item__feedback-title {
+            @include textSet(32px, 38px, #26272d);
+            margin-bottom: 48px;
+          }
+          #reviews-item__feedback-subtitle {
+            @include textSet(20px, 28px, #8c8f94);
+            width: 555px;
+            margin: 0 auto 30px;
+          }
+          #reviews-item__rating {
+            ul {
+              display: flex;
+              margin: 0 43.5% 38px;
+            }
+          }
+          #reviews-item__author {
+            @include textSet(12px, 22px, #26272d);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+          }
+        }
+      }
     }
+  }
 }
 $clr1d: #26272d;
 $clr2c: #26292c;
 #plan {
-    background-color: #f4f4f5;
-    padding: 159px 0 243px;
-    #plan__inner {
-        display: flex;
-        #about-plan {
-            margin-right: 149px;
-            #plan-title {
-                font-family: "Varela Round", sans-serif;
-                @include textSet(42px, 52px, $clr1d);
-                margin-bottom: 67px;
-                width: 255px;
-            }
-            #plan-choice {
-                #face {
-                    @include textSet(12px, 22px, $clr1d);
-                    font-weight: 700;
-                    margin-bottom: 24px;
-                    text-transform: uppercase;
-                }
-                #plan-switch {
-                    border: 1px solid #e6e7e8;
-                    display: flex;
-                    width: 258px;
-                    height: 50px;
-                    border-radius: 25px;
-                    margin-bottom: 77px;
-                    position: relative;
-                    #plan-switch__individual {
-                        @include textSet(16px, normal, $clr2c);
-                        margin: 13px 0 13px 20px;
-                        z-index: 2;
-                    }
-                    #plan-switch__company {
-                        @include textSet(16px, normal, $clr2c);
-                        opacity: 0.4;
-                        margin: 13px 0 13px 61px;
-                    }
+  background-color: #f4f4f5;
+  padding: 159px 0 243px;
+  #plan__inner {
+    display: flex;
+    #about-plan {
+      margin-right: 149px;
+      #plan-title {
+        font-family: "Varela Round", sans-serif;
+        @include textSet(42px, 52px, $clr1d);
+        margin-bottom: 67px;
+        width: 255px;
+      }
+      #plan-choice {
+        #face {
+          @include textSet(12px, 22px, $clr1d);
+          font-weight: 700;
+          margin-bottom: 24px;
+          text-transform: uppercase;
+        }
+        #plan-switch {
+          border: 1px solid #e6e7e8;
+          display: flex;
+          width: 258px;
+          height: 50px;
+          border-radius: 25px;
+          margin-bottom: 77px;
+          position: relative;
+          #plan-switch__individual {
+            @include textSet(16px, normal, $clr2c);
+            margin: 13px 0 13px 20px;
+            z-index: 2;
+          }
+          #plan-switch__company {
+            @include textSet(16px, normal, $clr2c);
+            opacity: 0.4;
+            margin: 13px 0 13px 61px;
+          }
 
-                    &::after {
-                        content: "";
-                        display: block;
-                        background-color: #ffffff;
-                        width: 96px;
-                        height: 39px;
-                        border-radius: 21px;
-                        top: 4px;
-                        left: 5px;
-                        position: absolute;
-                    }
-                }
-            }
-            #plan-descr {
-                @include textSet(20px, 28px, #8c8f94);
-                width: 355px;
-                margin-bottom: 44px;
-            }
-            #plan-cooperation {
-                @include textSet(14px, 24px, #8c8f94);
-                a {
-                    color: #418df4;
-                    text-decoration: underline 1px solid #418df4;
-                }
-            }
+          &::after {
+            content: "";
+            display: block;
+            background-color: #ffffff;
+            width: 96px;
+            height: 39px;
+            border-radius: 21px;
+            top: 4px;
+            left: 5px;
+            position: absolute;
+          }
         }
-        #plan-item {
-            display: flex;
-            text-align: center;
-            #plan-start {
-                box-shadow: 28px 12px 50px rgba(92, 95, 101, 0.6);
-                border-radius: 10px;
-                width: 340px;
-                height: 550px;
-                z-index: 1;
-                #plan-start__title {
-                    @include textSet(32px, 38px, $clr1d);
-                    margin: 62px 0 29px;
-                }
-                #plan-start__price {
-                    @include textSet(11px, 22px, $clr1d);
-                    font-weight: 700;
-                    border: 1px solid #b3b6b6;
-                    border-radius: 14px;
-                    width: 75px;
-                    margin: 0 auto;
-                    text-transform: uppercase;
-                    margin-bottom: 56px;
-                }
-                #plan-start__descr {
-                    @include textSet(20px, 28px, #8c8f94);
-                    width: 185px;
-                    margin: 0 auto;
-                    margin-bottom: 47px;
-                }
-                #plan-start__advantages {
-                    @include textSet(16px, 24px, $clr2c);
-                    margin-bottom: 62px;
-                    ul {
-                        li {
-                            margin: 0 0 27px 10px;
-                            span {
-                                background: url(../images/plan/On_Icon.svg) left no-repeat;
-                                padding: 0 20px;
-                            }
-                        }
-                    }
-                }
-                #plan-start__btn {
-                    background-color: #267df4;
-                    width: 212px;
-                    margin: 0 auto;
-                    border-radius: 21px;
-                    #plan-start__btn-text {
-                        @include textSet(13px, 40px, #ffffff);
-                        padding: 14px 67px;
-                    }
-                }
-            }
-            #plan-pro {
-                border-radius: 10px;
-                width: 340px;
-                height: 510px;
-                background-color: #ebebed;
-                #plan-pro__title {
-                    @include textSet(32px, 38px, $clr1d);
-                    margin: 52px 0 29px;
-                }
-                #plan-pro__price {
-                    @include textSet(11px, 22px, $clr1d);
-                    font-weight: 700;
-                    border: 1px solid #b3b6b6;
-                    border-radius: 14px;
-                    width: 75px;
-                    margin: 0 auto;
-                    text-transform: uppercase;
-                    margin-bottom: 56px;
-                }
-                #plan-pro__descr {
-                    @include textSet(20px, 28px, #8c8f94);
-                    width: 185px;
-                    margin: 0 auto;
-                    margin-bottom: 47px;
-                }
-                #plan-pro__advantages {
-                    @include textSet(16px, 24px, $clr2c);
-                    margin-bottom: 52px;
-                    ul {
-                        li {
-                            margin: 0 0 17px 10px;
-                            span {
-                                background: url(../images/plan/On_Icon.svg) left no-repeat;
-                                padding: 0 20px;
-                            }
-                        }
-                    }
-                }
-                #plan-pro__btn {
-                    border: 1px solid #267df4;
-                    width: 212px;
-                    margin: 0 auto;
-                    border-radius: 21px;
-                    #plan-pro__btn-text {
-                        @include textSet(13px, 40px, #267df4);
-                        padding: 14px 62px;
-                    }
-                }
-            }
+      }
+      #plan-descr {
+        @include textSet(20px, 28px, #8c8f94);
+        width: 355px;
+        margin-bottom: 44px;
+      }
+      #plan-cooperation {
+        @include textSet(14px, 24px, #8c8f94);
+        a {
+          color: #418df4;
+          text-decoration: underline 1px solid #418df4;
         }
+      }
     }
+    #plan-item {
+      display: flex;
+      text-align: center;
+      #plan-start {
+        box-shadow: 28px 12px 50px rgba(92, 95, 101, 0.6);
+        border-radius: 10px;
+        width: 340px;
+        height: 550px;
+        z-index: 1;
+        #plan-start__title {
+          @include textSet(32px, 38px, $clr1d);
+          margin: 62px 0 29px;
+        }
+        #plan-start__price {
+          @include textSet(11px, 22px, $clr1d);
+          font-weight: 700;
+          border: 1px solid #b3b6b6;
+          border-radius: 14px;
+          width: 75px;
+          margin: 0 auto;
+          text-transform: uppercase;
+          margin-bottom: 56px;
+        }
+        #plan-start__descr {
+          @include textSet(20px, 28px, #8c8f94);
+          width: 185px;
+          margin: 0 auto;
+          margin-bottom: 47px;
+        }
+        #plan-start__advantages {
+          @include textSet(16px, 24px, $clr2c);
+          margin-bottom: 62px;
+          ul {
+            li {
+              margin: 0 0 27px 10px;
+              span {
+                background: url(../images/plan/On_Icon.svg) left no-repeat;
+                padding: 0 20px;
+              }
+            }
+          }
+        }
+        #plan-start__btn {
+          background-color: #267df4;
+          width: 212px;
+          margin: 0 auto;
+          border-radius: 21px;
+          #plan-start__btn-text {
+            @include textSet(13px, 40px, #ffffff);
+            padding: 14px 67px;
+          }
+        }
+      }
+      #plan-pro {
+        border-radius: 10px;
+        width: 340px;
+        height: 510px;
+        background-color: #ebebed;
+        #plan-pro__title {
+          @include textSet(32px, 38px, $clr1d);
+          margin: 52px 0 29px;
+        }
+        #plan-pro__price {
+          @include textSet(11px, 22px, $clr1d);
+          font-weight: 700;
+          border: 1px solid #b3b6b6;
+          border-radius: 14px;
+          width: 75px;
+          margin: 0 auto;
+          text-transform: uppercase;
+          margin-bottom: 56px;
+        }
+        #plan-pro__descr {
+          @include textSet(20px, 28px, #8c8f94);
+          width: 185px;
+          margin: 0 auto;
+          margin-bottom: 47px;
+        }
+        #plan-pro__advantages {
+          @include textSet(16px, 24px, $clr2c);
+          margin-bottom: 52px;
+          ul {
+            li {
+              margin: 0 0 17px 10px;
+              span {
+                background: url(../images/plan/On_Icon.svg) left no-repeat;
+                padding: 0 20px;
+              }
+            }
+          }
+        }
+        #plan-pro__btn {
+          border: 1px solid #267df4;
+          width: 212px;
+          margin: 0 auto;
+          border-radius: 21px;
+          #plan-pro__btn-text {
+            @include textSet(13px, 40px, #267df4);
+            padding: 14px 62px;
+          }
+        }
+      }
+    }
+  }
 }
 
 #subcribe {
-    padding: 143px 131px;
-    background-color: #fff;
-    #subcribe__inner {
-        text-align: center;
-        #subcribe-form {
-            #subcribe-title {
-                font-family: "Varela Round", sans-serif;
-                @include textSet(42px, 52px, #3a3d4b);
-                margin-bottom: 47px;
-            }
-            #adress-input {
-                margin-bottom: 66px;
-                position: relative;
-                #adress-input__string {
-                    border-radius: 25px;
-                    border: 1px solid #cbcbcf;
-                    background-color: #ffffff;
-                    width: 502px;
-                    height: 50px;
-                    padding: 0 22px;
-                    @include textSet(16px, normal, #3a3d4b);
-                    &::placeholder {
-                        content: "";
-                    }
-                }
-                #adress-input__active-subcribe {
-                    position: absolute;
-                    @include textSet(16px, 42px, #ffffff);
-                    background-color: #6fc754;
-                    border-radius: 21px;
-                    top: 7%;
-                    left: 57%;
-                    width: 164px;
-
-                    span {
-                        background: url(../images/interface/Arrow_Icon.svg) right no-repeat;
-                        padding: 0 30px 3px 0;
-                    }
-                }
-            }
-            #subtitle {
-                @include textSet(12px, normal, #3a3d4b);
-                opacity: 0.3;
-                text-transform: uppercase;
-                margin-bottom: 22px;
-            }
+  padding: 143px 131px;
+  background-color: #fff;
+  #subcribe__inner {
+    text-align: center;
+    #subcribe-form {
+      #subcribe-title {
+        font-family: "Varela Round", sans-serif;
+        @include textSet(42px, 52px, #3a3d4b);
+        margin-bottom: 47px;
+      }
+      #adress-input {
+        margin-bottom: 66px;
+        position: relative;
+        #adress-input__string {
+          border-radius: 25px;
+          border: 1px solid #cbcbcf;
+          background-color: #ffffff;
+          width: 502px;
+          height: 50px;
+          padding: 0 22px;
+          @include textSet(16px, normal, #3a3d4b);
+          &::placeholder {
+            content: "";
+          }
         }
-    }
-}
-#footer{
-    padding: 90px 0;
-    #footer__inner{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        #company__inform{
+        #adress-input__active-subcribe {
+          position: absolute;
+          @include textSet(16px, 42px, #ffffff);
+          background-color: #6fc754;
+          border-radius: 21px;
+          top: 7%;
+          left: 57%;
+          width: 164px;
 
-            #company__inform-title{
-                margin-bottom: 34px;
-                @include textSet(18px,normal,$clr1d);
-                span{
-                    font-weight: 700;
-                }
-            }
-            #company__inform-decr{
-                width: 245px;
-                @include textSet(14px,24px,#8c8f94);
-                margin-bottom: 32px;
-            }
-            #company__inform-btn{
-                margin-bottom: 41px;
-            }
-            #company__inform-social{
-
-                ul{
-                    display: flex;
-                    li{
-                        margin-right: 28px;
-                    }
-                }
-            }
+          span {
+            background: url(../images/interface/Arrow_Icon.svg) right no-repeat;
+            padding: 0 30px 3px 0;
+          }
         }
-    }
-    #additional{
-        @include textSet(16px, 22px, #26272d);
-        font-weight: 700;
+      }
+      #subtitle {
+        @include textSet(12px, normal, #3a3d4b);
+        opacity: 0.3;
         text-transform: uppercase;
-        margin-bottom: 159px;
-        display: flex;
-        li{
-            margin-right: 93px;
-            @include textSet(16px, 36px, #8c8f94);
-            text-transform:none;
-            font-weight: 400;
-        }
+        margin-bottom: 22px;
+      }
     }
-    hr {
-        margin: 126px auto;
-        opacity: 0.05;
-        border: 1px solid #26272d;
-        width: 1170px;
-    }
-    #copyright{
-        display: flex;
-        justify-content: space-between;
-        #copyright-link{
-            @include textSet(14px, normal, #8c8f94);
-            margin-right: 40em;
-            a{
-                color: #7c8dee;
-                text-decoration: underline 1px solid#7c8dee;
-            }
+  }
+}
+#footer {
+  padding: 90px 0;
+  #footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    #company__inform {
+      #company__inform-title {
+        margin-bottom: 34px;
+        @include textSet(18px, normal, $clr1d);
+        span {
+          font-weight: 700;
         }
-        #copyright-made{
-            img{
-                margin: -10px 11px 0px;
-            }
+      }
+      #company__inform-decr {
+        width: 245px;
+        @include textSet(14px, 24px, #8c8f94);
+        margin-bottom: 32px;
+      }
+      #company__inform-btn {
+        margin-bottom: 41px;
+      }
+      #company__inform-social {
+        ul {
+          display: flex;
+          li {
+            margin-right: 28px;
+          }
         }
+      }
     }
+  }
+  #additional {
+    @include textSet(16px, 22px, #26272d);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 159px;
+    display: flex;
+    li {
+      margin-right: 93px;
+      @include textSet(16px, 36px, #8c8f94);
+      text-transform: none;
+      font-weight: 400;
+    }
+  }
+  hr {
+    margin: 126px auto;
+    opacity: 0.05;
+    border: 1px solid #26272d;
+    width: 1170px;
+  }
+  #copyright {
+    display: flex;
+    justify-content: space-between;
+    #copyright-link {
+      @include textSet(14px, normal, #8c8f94);
+      margin-right: 40em;
+      a {
+        color: #7c8dee;
+        text-decoration: underline 1px solid#7c8dee;
+      }
+    }
+    #copyright-made {
+      img {
+        margin: -10px 11px 0px;
+      }
+    }
+  }
 }
