@@ -5,6 +5,10 @@
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.ttf");
 }
+@font-face {
+  font-family: "Roboto Light";
+  src: url("../fonts/Roboto-Light.ttf");
+}
 
 * {
   font-family: "Roboto", sans-serif;
@@ -105,7 +109,7 @@
 }
 
 #greet {
-  padding: 128px 0 0 0;
+  padding: 80px 0 0 0;
   background-image: url(../images/mountains.png);
   background-size: cover;
   background-position: center;
@@ -113,41 +117,49 @@
   #greet__inner {
     text-align: center;
     h1 {
-      font-family: "Varela Round", sans-serif;
-      @include textSet(62px, 72px, #26272d);
-      margin-bottom: 40px;
+      font-family: "Roboto", sans-serif;
+      @include textSet(62px, 72px, #333);
+      margin-bottom: 10px;
     }
     #subtitle {
+      line-height: 28px;
       font-size: 20px;
       color: #8c8f94;
-      width: 781px;
-      margin: 0 auto;
-      margin-bottom: 62px;
+      width: 750px;
+      margin: 0 auto 50px auto;
     }
-    #video-btn {
+
+    #vide-btn_obj {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      column-gap: 15px;
+
+      margin: 0 auto 75px auto;
+
+      width: 219px;
+
       border: 1px solid #d9dcde;
       border-radius: 25px;
+
       background-color: #f6f7f9;
-      width: 15%;
-      margin: 0 40%;
-      height: 50px;
-      width: 205px;
-      margin-bottom: 75px;
-      #vide-btn_obj {
-        padding: 15px 0;
-        span {
-          img {
-            padding: 3px 15px 0 0;
-          }
-        }
-        #vide-btn__link {
-          font-size: 16px;
-          color: #26272d;
-          text-decoration: none;
-          padding: 18px 0;
-        }
+
+      color: #26272d;
+
+      img {
+        height: 12px;
+        width: 12px;
+      }
+
+      padding: 14px 48px;
+      #vide-btn__link {
+        font-size: 16px;
+        color: #26272d;
+        text-decoration: none;
       }
     }
+
     #smartphone {
       margin: 0 auto;
     }
@@ -163,20 +175,24 @@
   }
   #features__inner {
     display: flex;
-    @include textSet(26px, 34px, #26272d);
+    justify-content: space-between;
 
     #function-item {
-      margin-right: 111px;
+
       img {
         margin-bottom: 45px;
       }
-      h2 {
-        margin-bottom: 48px;
+      h4 {
         font-weight: 300;
+        margin-bottom: 25px;
+
+        @include textSet(26px, 34px, #333);
+
+        font-family: "Roboto Light";
       }
       #function-descr {
-        @include textSet(18px, 26px, #8c8f94);
-        width: 496px;
+        @include textSet(18px, 28px, #8c8f94);
+        max-width: 476px;
       }
     }
   }
@@ -193,22 +209,20 @@
   position: relative;
   #protection__inner {
     #iphone {
-      right: 54%;
+      right: 49%;
       position: absolute;
       bottom: 0%;
     }
     #specification {
-      margin-left: 45%;
-      h3 {
-        font-family: "Varela Round", sans-serif;
-        @include textSet(42px, 52px, #26272d);
-        margin-bottom: 73px;
-        width: 230px;
+      margin-left: 55%;
+      h2 {
+        font-family: "Roboto", sans-serif;
+        @include textSet(55px, 52px, #000);
+        margin-bottom: 64px;
       }
       #specification-decr {
         @include textSet(20px, 28px, #8c8f94);
-        width: 475px;
-        margin-bottom: 75px;
+        margin-bottom: 72px;
       }
       #specification-btn {
         display: flex;
@@ -253,14 +267,14 @@
 
     #interpretation {
       h3 {
-        font-family: "Varela Round", sans-serif;
-        @include textSet(42px, 52px, #26272d);
+        font-family: "Roboto", sans-serif;
+        @include textSet(52px, 52px, #26272d);
         margin-bottom: 64px;
-        width: 300px;
+        max-width: 346px;
       }
       #disposition-decr {
-        @include textSet(20px, 28px, #8c8f94);
-        margin-bottom: 68px;
+        @include textSet(18px, 28px, #8c8f94);
+        margin-bottom: 62px;
         width: 469px;
       }
       #partners {
@@ -283,40 +297,39 @@
 }
 
 #interface {
+  overflow: hidden;
+
   padding: 143px 131px;
   background-color: #f5f5f8;
   #interface__inner {
     text-align: center;
     #title {
-      font-family: "Varela Round", sans-serif;
-      @include textSet(42px, 52px, #26272d);
+      font-family: "Roboto", sans-serif;
+      @include textSet(52px, 52px, #333);
       margin-bottom: 45px;
       &::after {
         content: "";
         display: block;
         width: 50px;
         height: 2px;
-        margin: 47px auto;
+        margin: 40px auto;
         background-color: #267df4;
         border-radius: 1px;
       }
     }
     #subtitle {
       @include textSet(12px, 22px, #8c8f94);
+      font-weight: 700;
       text-transform: uppercase;
-      margin-bottom: 46px;
+      letter-spacing: 0.1em;
+      margin-bottom: 26px;
     }
     #image-phone {
       margin-bottom: 198px;
       ul {
         display: flex;
-        align-items: center;
         justify-content: center;
-        //fix the width in image-phone and map
-        margin: 0 -33.5%;
-        li {
-          width: 23%;
-        }
+        align-items: center
       }
     }
     #invite {
