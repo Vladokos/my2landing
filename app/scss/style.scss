@@ -20,29 +20,29 @@
   color: $clr;
 }
 
-#container {
+.container {
   margin: 0 auto;
   width: 1170px;
   padding: 0 15px;
 }
 
-#main-nav {
+.main-nav {
   background-color: #f8faf9;
   padding: 60px 0;
-  #main-nav__inner {
+  .main-nav__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     @include textSet(16px, normal, #26272d);
   }
-  #info-nav {
+  .info-nav {
     display: flex;
     align-items: center;
 
     column-gap: 50px;
   }
-  #info-nav__burgermenu {
+  .info-nav__burgermenu {
     cursor: pointer;
     div {
       background-color: #1b1c1e;
@@ -54,7 +54,7 @@
       margin: 0;
     }
   }
-  #info-nav__src {
+  .info-nav__src {
     ul {
       display: flex;
       column-gap: 30px;
@@ -66,7 +66,7 @@
       color: #267df4;
     }
   }
-  #logo {
+  .logo {
     cursor: pointer;
 
     // margin: 0 197px;
@@ -75,7 +75,7 @@
       font-weight: 700;
     }
   }
-  #other-menu {
+  .other-menu {
     text-decoration-style: none;
     ul {
       display: flex;
@@ -88,14 +88,14 @@
     li {
       cursor: pointer;
 
-      #interface #interface__inner #image-phone ul #ios,
+      .interface .interface__inner .image-phone ul .ios,
       a {
         background-color: #267df4;
         border-radius: 21px;
         color: #fff;
         padding: 9px 16px;
       }
-      #ios img {
+      .ios img {
         width: 13px;
         height: 16px;
       }
@@ -106,22 +106,85 @@
       color: #267df4;
     }
   }
+  aside {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #26272d;
+    color: #ffffff;
+    padding: 40px;
+    .side-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      button {
+        font-size: 16px;
+        font-weight: 700;
+        color: #ffffff;
+        background-color: #26272d;
+      }
+    }
+    ul {
+      li {
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+      li:hover{
+        color:#267df4;
+      }
+      margin-bottom: 20px;
+    }
+
+    .ios {
+      a {
+        background-color: #267df4;
+        border-radius: 21px;
+        color: #fff;
+        padding: 9px 16px;
+      }
+      .ios img {
+        width: 13px;
+        height: 16px;
+      }
+      display: block;
+      margin-bottom: 70px;
+    }
+    .side-footer {
+      .more-info {
+        p {
+          font-size: 14px;
+          line-height: 24px;
+          color: #ffffffcc;
+          a {
+            color: #267df4;
+            text-decoration: underline;
+          }
+          a:hover{
+            color: #23527c;
+          }
+        }
+      }
+    }
+  }
 }
 
-#greet {
+.greet {
   padding: 80px 0 0 0;
   background-image: url(../images/mountains.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  #greet__inner {
+  .greet__inner {
     text-align: center;
     h1 {
       font-family: "Roboto", sans-serif;
       @include textSet(62px, 72px, #333);
       margin-bottom: 10px;
     }
-    #subtitle {
+    .subtitle {
       line-height: 28px;
       font-size: 20px;
       color: #8c8f94;
@@ -129,7 +192,7 @@
       margin: 0 auto 50px auto;
     }
 
-    #vide-btn_obj {
+    .vide-btn_obj {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -153,32 +216,31 @@
       }
 
       padding: 14px 48px;
-      #vide-btn__link {
+      .vide-btn__link {
         font-size: 16px;
         color: #26272d;
         text-decoration: none;
       }
     }
 
-    #smartphone {
+    .smartphone {
       margin: 0 auto;
     }
   }
 }
 
-#features {
+.features {
   padding: 127px 0 167px 0;
   &::before {
     content: "";
     width: 10px;
     height: 10px;
   }
-  #features__inner {
+  .features__inner {
     display: flex;
     justify-content: space-between;
 
-    #function-item {
-
+    .function-item {
       img {
         margin-bottom: 45px;
       }
@@ -190,7 +252,7 @@
 
         font-family: "Roboto Light";
       }
-      #function-descr {
+      .function-descr {
         @include textSet(18px, 28px, #8c8f94);
         max-width: 476px;
       }
@@ -199,34 +261,34 @@
   hr {
     margin: 126px auto;
     opacity: 0.05;
-    border: 1px solid #26272d;
+    border: 1px solid 0.26272d;
     width: 1170px;
   }
 }
 
-#protection {
+.protection {
   padding: 126px 0 256px;
   position: relative;
-  #protection__inner {
-    #iphone {
+  .protection__inner {
+    .iphone {
       right: 49%;
       position: absolute;
       bottom: 0%;
     }
-    #specification {
+    .specification {
       margin-left: 55%;
       h2 {
         font-family: "Roboto", sans-serif;
         @include textSet(55px, 52px, #000);
         margin-bottom: 64px;
       }
-      #specification-decr {
+      .specification-decr {
         @include textSet(20px, 28px, #8c8f94);
         margin-bottom: 72px;
       }
-      #specification-btn {
+      .specification-btn {
         display: flex;
-        #specification-hackbtn {
+        .specification-hackbtn {
           margin-right: 52px;
           background-color: #267df4;
           border-radius: 21px;
@@ -241,7 +303,7 @@
             }
           }
         }
-        #specification-morebtn {
+        .specification-morebtn {
           border: 1px solid #e9e9ea;
           border-radius: 21px;
           width: 142px;
@@ -255,29 +317,29 @@
   }
 }
 
-#disposition {
-  #disposition__inner {
+.disposition {
+  .disposition__inner {
     padding: 205px 0 197px;
     position: relative;
-    #map {
+    .map {
       left: 46%;
       position: absolute;
       bottom: 17%;
     }
 
-    #interpretation {
+    .interpretation {
       h3 {
         font-family: "Roboto", sans-serif;
         @include textSet(52px, 52px, #26272d);
         margin-bottom: 64px;
         max-width: 346px;
       }
-      #disposition-decr {
+      .disposition-decr {
         @include textSet(18px, 28px, #8c8f94);
         margin-bottom: 62px;
         width: 469px;
       }
-      #partners {
+      .partners {
         p {
           @include textSet(14px, 22px, #26272d);
           font-weight: 700;
@@ -285,9 +347,9 @@
           text-transform: uppercase;
           letter-spacing: 0.1em;
         }
-        #parner-img {
+        .parner-img {
           display: flex;
-          #partners-img__dropbox {
+          .partners-img__dropbox {
             margin-right: 31px;
           }
         }
@@ -296,14 +358,14 @@
   }
 }
 
-#interface {
+.interface {
   overflow: hidden;
 
   padding: 143px 131px;
   background-color: #f5f5f8;
-  #interface__inner {
+  .interface__inner {
     text-align: center;
-    #title {
+    .title {
       font-family: "Roboto", sans-serif;
       @include textSet(52px, 52px, #333);
       margin-bottom: 45px;
@@ -317,37 +379,41 @@
         border-radius: 1px;
       }
     }
-    #subtitle {
+    .subtitle {
       @include textSet(12px, 22px, #8c8f94);
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       margin-bottom: 26px;
     }
-    #image-phone {
+    .image-phone {
       margin-bottom: 198px;
       ul {
         display: flex;
         justify-content: center;
-        align-items: center
+        align-items: center;
       }
     }
-    #invite {
-      #invite-company-name {
-        @include textSet(12px, 22px, #3a3d4b);
-        opacity: 0.5;
+    .invite {
+      .invite-company-name {
+        @include textSet(12px, 22px, #8c8f94);
+        letter-spacing: 1px;
+
         text-transform: uppercase;
         margin-bottom: 37px;
+        span {
+          font-weight: 700;
+        }
       }
-      #invite-title {
-        font-family: "Varela Round", sans-serif;
-        @include textSet(42px, 52px, #3a3d4b);
-        margin-bottom: 47px;
+      .invite-title {
+        font-family: "Roboto", sans-serif;
+        @include textSet(52px, 52px, #3a3d4b);
+        margin-bottom: 64px;
       }
-      #adress-input {
+      .adress-input {
         margin-bottom: 66px;
         position: relative;
-        #adress-input__string {
+        .adress-input__string {
           border-radius: 25px;
           border: 1px solid #cbcbcf;
           background-color: #f5f5f8;
@@ -359,7 +425,7 @@
             content: "";
           }
         }
-        #adress-input__sendInvite {
+        .adress-input__sendInvite {
           position: absolute;
           @include textSet(16px, 42px, #ffffff);
           background-color: #6fc754;
@@ -374,41 +440,52 @@
           }
         }
       }
-      #subtitle {
-        @include textSet(12px, normal, #3a3d4b);
-        opacity: 0.3;
+      .subtitle {
+        @include textSet(12px, normal, #8c8f94);
+        letter-spacing: 1px;
+        font-weight: 700;
         text-transform: uppercase;
         margin-bottom: 22px;
       }
-      #download {
+      .download {
         background-color: #131315;
         border-radius: 30px;
         width: 210px;
         margin: 0 auto;
-        padding: 0 0 5px 0;
-        #download-store {
-          @include textSet(16px, 25px, #ffffff);
-          span {
-            background: url(../images/interface/Apple_Logo.svg) left no-repeat;
-            padding: 10px 0 35px 40px;
-            p {
-              font-size: 24px;
-              padding-left: 40px;
-            }
+        padding: 9px 28px;
+
+        .download-store {
+          width: 64%;
+          display: block;
+          text-align: left;
+          margin-left: 32%;
+
+          @include textSet(12px, 20px, #ffffff);
+
+          b {
+            font-size: 22px;
           }
+        }
+        .download-store::before {
+          content: "";
+          position: absolute;
+          transform: translate(-45px, 5px);
+          width: 30px;
+          height: 30px;
+          background: url(../images/interface/Apple_Logo.svg) left no-repeat;
         }
       }
     }
   }
 }
 
-#reviews {
+.reviews {
   padding: 132px 0 128px;
-  #reviews-inner {
-    #reviews-items {
-      #reviews-item {
+  .reviews-inner {
+    .reviews-items {
+      .reviews-item {
         text-align: center;
-        #reviews-item__img {
+        .reviews-item__img {
           margin-bottom: 75px;
           img {
             box-shadow: 15px 41px 66px rgba(92, 95, 101, 0.28),
@@ -416,23 +493,23 @@
             border-radius: 50%;
           }
         }
-        #reviews-item__feedback {
-          #reviews-item__feedback-title {
+        .reviews-item__feedback {
+          .reviews-item__feedback-title {
             @include textSet(32px, 38px, #26272d);
             margin-bottom: 48px;
           }
-          #reviews-item__feedback-subtitle {
+          .reviews-item__feedback-subtitle {
             @include textSet(20px, 28px, #8c8f94);
             width: 555px;
             margin: 0 auto 30px;
           }
-          #reviews-item__rating {
+          .reviews-item__rating {
             ul {
               display: flex;
               margin: 0 43.5% 38px;
             }
           }
-          #reviews-item__author {
+          .reviews-item__author {
             @include textSet(12px, 22px, #26272d);
             font-weight: 700;
             text-transform: uppercase;
@@ -445,41 +522,43 @@
 }
 $clr1d: #26272d;
 $clr2c: #26292c;
-#plan {
+.plan {
   background-color: #f4f4f5;
   padding: 159px 0 243px;
-  #plan__inner {
+  .plan__inner {
     display: flex;
-    #about-plan {
+    .about-plan {
       margin-right: 149px;
-      #plan-title {
-        font-family: "Varela Round", sans-serif;
-        @include textSet(42px, 52px, $clr1d);
-        margin-bottom: 67px;
-        width: 255px;
+      .plan-title {
+        font-family: "Roboto", sans-serif;
+        @include textSet(52px, 52px, #333);
+        margin-bottom: 64px;
       }
-      #plan-choice {
-        #face {
+      .plan-choice {
+        .face {
           @include textSet(12px, 22px, $clr1d);
+          letter-spacing: 0.1em;
           font-weight: 700;
-          margin-bottom: 24px;
+          margin-bottom: 10px;
           text-transform: uppercase;
         }
-        #plan-switch {
+        .plan-switch {
           border: 1px solid #e6e7e8;
           display: flex;
           width: 258px;
           height: 50px;
           border-radius: 25px;
-          margin-bottom: 77px;
+          margin-bottom: 70px;
           position: relative;
-          #plan-switch__individual {
-            @include textSet(16px, normal, $clr2c);
+          .plan-switch__individual {
+            cursor: pointer;
+            @include textSet(16px, normal, $clr1d);
             margin: 13px 0 13px 20px;
             z-index: 2;
           }
-          #plan-switch__company {
-            @include textSet(16px, normal, $clr2c);
+          .plan-switch__company {
+            cursor: pointer;
+            @include textSet(16px, normal, $clr1d);
             opacity: 0.4;
             margin: 13px 0 13px 61px;
           }
@@ -497,12 +576,11 @@ $clr2c: #26292c;
           }
         }
       }
-      #plan-descr {
-        @include textSet(20px, 28px, #8c8f94);
-        width: 355px;
-        margin-bottom: 44px;
+      .plan-descr {
+        @include textSet(18px, 28px, #8c8f94);
+        margin-bottom: 34px;
       }
-      #plan-cooperation {
+      .plan-cooperation {
         @include textSet(14px, 24px, #8c8f94);
         a {
           color: #418df4;
@@ -510,41 +588,44 @@ $clr2c: #26292c;
         }
       }
     }
-    #plan-item {
+    .plan-item {
       display: flex;
+      align-items: center;
       text-align: center;
-      #plan-start {
+      .plan-start {
+        padding: 60px 15px 70px;
         box-shadow: 28px 12px 50px rgba(92, 95, 101, 0.6);
         border-radius: 10px;
         width: 340px;
-        height: 550px;
         z-index: 1;
-        #plan-start__title {
-          @include textSet(32px, 38px, $clr1d);
-          margin: 62px 0 29px;
+        .plan-start__title {
+          font-family: "Roboto Light", sans-serif;
+          @include textSet(32px, 38px, #333);
+          margin: 0 0 29px;
         }
-        #plan-start__price {
+        .plan-start__price {
+          padding: 6px 18px;
           @include textSet(11px, 22px, $clr1d);
+          letter-spacing: 0.1em;
           font-weight: 700;
           border: 1px solid #b3b6b6;
-          border-radius: 14px;
-          width: 75px;
+          border-radius: 25px;
+          width: 67px;
           margin: 0 auto;
           text-transform: uppercase;
-          margin-bottom: 56px;
+          margin-bottom: 40px;
         }
-        #plan-start__descr {
+        .plan-start__descr {
           @include textSet(20px, 28px, #8c8f94);
-          width: 185px;
-          margin: 0 auto;
-          margin-bottom: 47px;
+
+          margin-bottom: 38px;
         }
-        #plan-start__advantages {
-          @include textSet(16px, 24px, $clr2c);
+        .plan-start__advantages {
+          @include textSet(16px, 24px, $clr1d);
           margin-bottom: 62px;
           ul {
             li {
-              margin: 0 0 27px 10px;
+              margin: 0 0 12px 10px;
               span {
                 background: url(../images/plan/On_Icon.svg) left no-repeat;
                 padding: 0 20px;
@@ -552,48 +633,52 @@ $clr2c: #26292c;
             }
           }
         }
-        #plan-start__btn {
+        .plan-start__btn {
           background-color: #267df4;
           width: 212px;
           margin: 0 auto;
           border-radius: 21px;
-          #plan-start__btn-text {
-            @include textSet(13px, 40px, #ffffff);
-            padding: 14px 67px;
+          .plan-start__btn-text {
+            @include textSet(16px, 40px, #ffffff);
+            padding: 14px 65px;
           }
         }
       }
-      #plan-pro {
+      .plan-pro {
+        padding: 40px 15px 50px;
         border-radius: 10px;
         width: 340px;
         height: 510px;
         background-color: #ebebed;
-        #plan-pro__title {
+        .plan-pro__title {
+          font-family: "Roboto Light", sans-serif;
+
           @include textSet(32px, 38px, $clr1d);
-          margin: 52px 0 29px;
+          margin: 0 0 29px;
         }
-        #plan-pro__price {
+        .plan-pro__price {
+          padding: 6px 18px;
           @include textSet(11px, 22px, $clr1d);
+          letter-spacing: 0.1em;
           font-weight: 700;
           border: 1px solid #b3b6b6;
-          border-radius: 14px;
-          width: 75px;
+          border-radius: 25px;
+          width: 67px;
           margin: 0 auto;
           text-transform: uppercase;
-          margin-bottom: 56px;
+          margin-bottom: 40px;
         }
-        #plan-pro__descr {
+        .plan-pro__descr {
           @include textSet(20px, 28px, #8c8f94);
-          width: 185px;
-          margin: 0 auto;
-          margin-bottom: 47px;
+
+          margin-bottom: 38px;
         }
-        #plan-pro__advantages {
+        .plan-pro__advantages {
           @include textSet(16px, 24px, $clr2c);
-          margin-bottom: 52px;
+          margin-bottom: 62px;
           ul {
             li {
-              margin: 0 0 17px 10px;
+              margin: 0 0 12px 10px;
               span {
                 background: url(../images/plan/On_Icon.svg) left no-repeat;
                 padding: 0 20px;
@@ -601,14 +686,14 @@ $clr2c: #26292c;
             }
           }
         }
-        #plan-pro__btn {
+        .plan-pro__btn {
           border: 1px solid #267df4;
           width: 212px;
           margin: 0 auto;
           border-radius: 21px;
-          #plan-pro__btn-text {
-            @include textSet(13px, 40px, #267df4);
-            padding: 14px 62px;
+          .plan-pro__btn-text {
+            @include textSet(16px, 40px, #267df4);
+            padding: 14px 50px;
           }
         }
       }
@@ -616,21 +701,21 @@ $clr2c: #26292c;
   }
 }
 
-#subcribe {
+.subcribe {
   padding: 143px 131px;
   background-color: #fff;
-  #subcribe__inner {
+  .subcribe__inner {
     text-align: center;
-    #subcribe-form {
-      #subcribe-title {
-        font-family: "Varela Round", sans-serif;
-        @include textSet(42px, 52px, #3a3d4b);
-        margin-bottom: 47px;
+    .subcribe-form {
+      .subcribe-title {
+        font-family: "Roboto", sans-serif;
+        @include textSet(52px, 52px, #3a3d4b);
+        margin-bottom: 64px;
       }
-      #adress-input {
-        margin-bottom: 66px;
+      .adress-input {
+        margin-bottom: 20px;
         position: relative;
-        #adress-input__string {
+        .adress-input__string {
           border-radius: 25px;
           border: 1px solid #cbcbcf;
           background-color: #ffffff;
@@ -642,7 +727,7 @@ $clr2c: #26292c;
             content: "";
           }
         }
-        #adress-input__active-subcribe {
+        .adress-input__active-subcribe {
           position: absolute;
           @include textSet(16px, 42px, #ffffff);
           background-color: #6fc754;
@@ -657,40 +742,40 @@ $clr2c: #26292c;
           }
         }
       }
-      #subtitle {
-        @include textSet(12px, normal, #3a3d4b);
-        opacity: 0.3;
+      .subtitle {
+        @include textSet(12px, normal, #8c8f94);
         text-transform: uppercase;
         margin-bottom: 22px;
       }
     }
   }
 }
-#footer {
+.footer {
   padding: 90px 0;
-  #footer__inner {
+  .footer__inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    #company__inform {
-      #company__inform-title {
+    .company__inform {
+      .company__inform-title {
         margin-bottom: 34px;
         @include textSet(18px, normal, $clr1d);
         span {
           font-weight: 700;
         }
       }
-      #company__inform-decr {
-        width: 245px;
+      .company__inform-decr {
+        width: 258px;
         @include textSet(14px, 24px, #8c8f94);
         margin-bottom: 32px;
       }
-      #company__inform-btn {
+      .company__inform-btn {
         margin-bottom: 41px;
       }
-      #company__inform-social {
+      .company__inform-social {
         ul {
           display: flex;
+          align-items: center;
           li {
             margin-right: 28px;
           }
@@ -698,12 +783,17 @@ $clr2c: #26292c;
       }
     }
   }
-  #additional {
-    @include textSet(16px, 22px, #26272d);
+  .additional {
+    @include textSet(12px, 22px, #26272d);
     font-weight: 700;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 159px;
     display: flex;
+    .title {
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 10px;
+    }
     li {
       margin-right: 93px;
       @include textSet(16px, 36px, #8c8f94);
@@ -717,18 +807,18 @@ $clr2c: #26292c;
     border: 1px solid #26272d;
     width: 1170px;
   }
-  #copyright {
+  .copyright {
     display: flex;
     justify-content: space-between;
-    #copyright-link {
+    .copyright-link {
       @include textSet(14px, normal, #8c8f94);
       margin-right: 40em;
       a {
         color: #7c8dee;
-        text-decoration: underline 1px solid#7c8dee;
+        text-decoration: underline 1px solid #7c8dee;
       }
     }
-    #copyright-made {
+    .copyright-made {
       img {
         margin: -10px 11px 0px;
       }
