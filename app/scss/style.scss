@@ -20,6 +20,8 @@
   color: $clr;
 }
 
+
+
 .container {
   margin: 0 auto;
   width: 1170px;
@@ -110,11 +112,10 @@
       color: #267df4;
     }
   }
-  aside.active {
+  .sidebar {
     position: fixed;
     z-index: 2;
     top: 0;
-    left: 0;
     height: 100%;
     background-color: #26272d;
     color: #ffffff;
@@ -173,8 +174,14 @@
       }
     }
   }
-  aside.disable {
-    display: none;
+  .sidebar.active{
+    left: 0;
+    transition: left 0.7s cubic-bezier(0.545, 0, 0.05, 1);
+  }
+  .sidebar.disable {
+    
+    left: -270px;
+    transition: left 0.7s cubic-bezier(0.545, 0, 0.05, 1);
   }
 }
 
