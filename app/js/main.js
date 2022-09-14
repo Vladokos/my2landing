@@ -23,7 +23,6 @@ $("#close").on("click", () => {
 });
 
 $(document).on("scroll", () => {
-  console.log($(document).scrollTop());
   if ($(document).scrollTop() > 0 && !header.hasClass("active")) {
     header.addClass("active");
   } else if ( $(document).scrollTop() === 0) {
