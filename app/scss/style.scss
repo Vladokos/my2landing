@@ -20,7 +20,16 @@
   color: $clr;
 }
 
-
+@keyframes raise {
+  0%{
+    transform: translate(0px, 100px);
+    // opacity: 0;
+  }
+  100%{
+    transform: translate(0px,0px);
+    // opacity: 1;
+  }
+}
 
 .container {
   margin: 0 auto;
@@ -199,6 +208,7 @@
   .greet__inner {
     text-align: center;
     h1 {
+      animation: raise 1.8s cubic-bezier(0, 0, 0.58, 1);
       font-family: "Roboto", sans-serif;
       @include textSet(62px, 72px, #333);
       margin-bottom: 10px;
