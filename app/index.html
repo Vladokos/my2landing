@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.min.css" />
     <link rel="stylesheet" href="css/reset.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -74,20 +75,46 @@
     <section class="greet">
       <div class="container">
         <div class="greet__inner">
-          <h1>What happens tomorrow?</h1>
-          <div class="subtitle">
+          <div>
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="650"
+              data-aos-easing="ease-in-out"
+            >
+              What happens tomorrow?
+            </h1>
+          </div>
+          <div
+            class="subtitle"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="150"
+          >
             The sight of the tumblers restored Bob Sawyer to a degree of
             equanimity which he had not possessed since his interview with his
             landlady. His face brightened up, and he began to feel quite
             convivial.
           </div>
 
-          <div class="vide-btn_obj">
+          <div
+            class="vide-btn_obj"
+            data-aos="fade-up"
+            data-aos-duration="750"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="250"
+          >
             <span><img src="images/greetIcon/Play_Icon.svg" alt="" /></span>
             <a href="" class="vide-btn__link">Watch Video</a>
           </div>
 
-          <div class="smartphone">
+          <div
+            class="smartphone"
+            data-aos="fade-up"
+            data-aos-duration="750"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="350"
+          >
             <img src="images/greetIcon/iPhone_6.png" alt="" />
           </div>
         </div>
@@ -96,7 +123,13 @@
     <section class="features">
       <div class="container">
         <div class="features__inner">
-          <div class="function-item">
+          <div
+            class="function-item"
+            data-aos="fade-up"
+            data-aos-duration="750"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="100"
+          >
             <img src="images/features/Lock_Icon.png" alt="" />
             <h4>Real-time all the time</h4>
             <div class="function-descr">
@@ -107,7 +140,13 @@
               hurried off to the garden door.
             </div>
           </div>
-          <div class="function-item">
+          <div
+            class="function-item"
+            data-aos="fade-up"
+            data-aos-duration="750"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="300"
+          >
             <img src="images/features/Clock_Icon.png" alt="" />
             <h4>Adopt without any obstacles</h4>
 
@@ -124,7 +163,13 @@
     <section class="protection">
       <div class="container">
         <div class="protection__inner">
-          <div class="iphone">
+          <div
+            class="iphone"
+            data-aos="fade-right"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="200"
+          >
             <img src="images/protection/iPhone_6.png" alt="" />
           </div>
           <div class="specification">
@@ -152,7 +197,13 @@
     <section class="disposition">
       <div class="container">
         <div class="disposition__inner">
-          <div class="map">
+          <div
+            class="map"
+            data-aos="zoom-in-left"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="200"
+          >
             <img src="images/disposition/World_Map.png" alt="" />
           </div>
           <div class="interpretation">
@@ -187,13 +238,47 @@
           <div class="subtitle">Landing Screen</div>
           <div class="image-phone">
             <ul>
-              <li><img src="images/interface/Screen_1.png" alt="" /></li>
-              <li><img src="images/interface/Screen_2.png" alt="" /></li>
-              <li class="image-phone__main">
+              <li
+                data-aos="fade-up"
+                data-aos-duration="750"
+                data-aos-easing="ease-in-out"
+                data-aos-delay="350"
+              >
+                <img src="images/interface/Screen_1.png" alt="" />
+              </li>
+              <li
+                data-aos="fade-up"
+                data-aos-duration="750"
+                data-aos-easing="ease-in-out"
+                data-aos-delay="250"
+              >
+                <img src="images/interface/Screen_2.png" alt="" />
+              </li>
+              <li
+                data-aos="fade-up"
+                data-aos-duration="750"
+                data-aos-easing="ease-in-out"
+                data-aos-delay="100"
+                class="image-phone__main"
+              >
                 <img src="images/interface/iPhone_6.png" alt="" />
               </li>
-              <li><img src="images/interface/Screen_3.png" alt="" /></li>
-              <li><img src="images/interface/Screen_4.png" alt="" /></li>
+              <li
+                data-aos="fade-up"
+                data-aos-duration="750"
+                data-aos-easing="ease-in-out"
+                data-aos-delay="250"
+              >
+                <img src="images/interface/Screen_3.png" alt="" />
+              </li>
+              <li
+                data-aos="fade-up"
+                data-aos-duration="750"
+                data-aos-easing="ease-in-out"
+                data-aos-delay="350"
+              >
+                <img src="images/interface/Screen_4.png" alt="" />
+              </li>
             </ul>
           </div>
           <div class="invite">
@@ -464,6 +549,9 @@
 
     <script src="js/main.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script src="js/animate-scroll.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
