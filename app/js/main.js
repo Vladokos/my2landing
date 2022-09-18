@@ -25,7 +25,31 @@ $("#close").on("click", () => {
 $(document).on("scroll", () => {
   if ($(document).scrollTop() > 0 && !header.hasClass("active")) {
     header.addClass("active");
-  } else if ( $(document).scrollTop() === 0) {
+  } else if ($(document).scrollTop() === 0) {
     header.removeClass("active");
+  }
+});
+
+$("#individual").on("click", () => {
+  if (!$("#switch").hasClass("individual")) {
+    $("#switch").removeClass("company");
+
+    $("#plan").removeClass("company");
+    setTimeout(() => {
+      $("#plan").addClass("individual");
+    }, 100);
+  }
+});
+
+$("#company").on("click", () => {
+  if (!$("#switch").hasClass("company")) {
+    $("#switch").removeClass("individual");
+
+    $("#switch").addClass("company");
+
+    $("#plan").removeClass("individual");
+    setTimeout(() => {
+      $("#plan").addClass("company");
+    }, 100);
   }
 });
