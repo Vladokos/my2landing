@@ -996,9 +996,60 @@ $clr2c: #26292c;
     width: 100%;
   }
 }
+@media (max-width: 680px) {
+  .reviews
+    .reviews-inner
+    .reviews-items
+    .reviews-item
+    .reviews-item__feedback
+    .reviews-item__feedback-subtitle {
+    max-width: 370px;
+  }
+  .reviews
+    .reviews-inner
+    .reviews-items
+    .reviews-item
+    .reviews-item__feedback
+    .reviews-item__feedback-title {
+    font-size: 27px;
+  }
+}
 @media (max-width: 550px) {
+  .interface .interface__inner .image-phone ul li img {
+    width: 200px;
+  }
   .interface .interface__inner .invite .adress-input .adress-input__string {
     width: 452px;
+  }
+  .reviews .reviews-inner .reviews-items .reviews-item .reviews-item__img img {
+    width: 80px;
+    height: 80px;
+  }
+  .reviews
+    .reviews-inner
+    .reviews-items
+    .reviews-item
+    .reviews-item__feedback
+    .reviews-item__feedback-title {
+    font-size: 25px;
+  }
+  .protection .protection__inner .specification .specification-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .protection
+    .protection__inner
+    .specification
+    .specification-btn
+    .specification-hackbtn {
+    width: 143px;
+  }
+  .reviews .reviews-inner .reviews-items .reviews-item .reviews-item__img {
+    max-width: 281px;
+  }
+  .reviews-item__feedback {
+    max-width: 281px;
   }
   .subcribe
     .subcribe__inner
@@ -1036,10 +1087,33 @@ $clr2c: #26292c;
     font-size: 32px;
   }
 }
+
+@media (max-width: 440px) {
+  .reviews
+    .reviews-inner
+    .reviews-items
+    .reviews-item
+    .reviews-item__feedback
+    .reviews-item__feedback-title {
+    font-size: 21px;
+    width: 200px;
+  }
+  .reviews
+    .reviews-inner
+    .reviews-items
+    .reviews-item
+    .reviews-item__feedback
+    .reviews-item__feedback-subtitle {
+    width: 150px;
+  }
+}
 @media (max-width: 400px) {
   .subcribe .subcribe__inner .subcribe-form .adress-input .adress-input__string,
   .interface .interface__inner .invite .adress-input .adress-input__string {
     width: 289px;
+  }
+  .slick-slider .slick-slide {
+    margin: 0 10px;
   }
   .subcribe
     .subcribe__inner
@@ -1065,9 +1139,6 @@ $clr2c: #26292c;
   }
   .protection .protection__inner .specification {
     margin-left: 0;
-  }
-  .interface .interface__inner .image-phone ul li img {
-    width: 200px;
   }
   .interface .interface__inner .invite .invite-title {
     font-size: 42px;
