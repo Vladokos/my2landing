@@ -8,6 +8,14 @@ $(document).ready(() => {
     slidesToShow: 1,
     centerMode: true,
     adaptiveHeight: true,
+    responsive:[
+      {
+        breakpoint:710,
+        settings:{
+          variableWidth: true
+        }
+      }
+    ]
   });
 });
 
