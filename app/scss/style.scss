@@ -498,7 +498,7 @@
           @include textSet(12px, 20px, #ffffff);
 
           b {
-            font-size: 22px;
+            font-size: 21px;
           }
         }
         .download-store::before {
@@ -862,6 +862,7 @@ $clr2c: #26292c;
           display: flex;
           align-items: center;
           li {
+            cursor: pointer;
             margin-right: 28px;
           }
         }
@@ -880,6 +881,8 @@ $clr2c: #26292c;
       margin-bottom: 10px;
     }
     li {
+      cursor: pointer;
+
       margin-right: 93px;
       @include textSet(16px, 36px, #8c8f94);
       text-transform: none;
